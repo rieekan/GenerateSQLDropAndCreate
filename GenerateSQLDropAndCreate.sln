@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USG.Utilities.GenerateSQLDropAndCreate", "GenerateSQLDropAndCreate\USG.Utilities.GenerateSQLDropAndCreate.csproj", "{F88587BF-D422-4302-BBAD-44DD7D57292E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USG.SQL.SMO", "USG.SQL.SMO\USG.SQL.SMO.csproj", "{BE75C51E-63DA-4EF3-B8BA-ECCACE5B5FE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F88587BF-D422-4302-BBAD-44DD7D57292E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88587BF-D422-4302-BBAD-44DD7D57292E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88587BF-D422-4302-BBAD-44DD7D57292E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88587BF-D422-4302-BBAD-44DD7D57292E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE75C51E-63DA-4EF3-B8BA-ECCACE5B5FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE75C51E-63DA-4EF3-B8BA-ECCACE5B5FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE75C51E-63DA-4EF3-B8BA-ECCACE5B5FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE75C51E-63DA-4EF3-B8BA-ECCACE5B5FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
