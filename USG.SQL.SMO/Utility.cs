@@ -96,8 +96,11 @@ namespace USG.SQL.SMO
                 //    }
                 //}
 
-                string GO = "GO\r\n\r\n";
+                string GO = "GO\r\n";
                 string crnl = "\r\n";
+
+                scrs = String.Format("USE [{0}]", DatabaseName) + crnl;
+                scrs += GO + crnl + crnl;
 
                 foreach (Table myTable in database.Tables)
                 {
