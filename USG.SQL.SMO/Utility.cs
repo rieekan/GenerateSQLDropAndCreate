@@ -132,41 +132,40 @@ namespace USG.SQL.SMO
                     }
                 }
 
-                //progress("*******************************************************************************");
-                //progress(" Filtering system stored procedures...");
-                //progress("*******************************************************************************");
+                progress("*******************************************************************************");
+                progress(" Filtering system stored procedures...");
+                progress("*******************************************************************************");
 
-                ////List<StoredProcedure> filteredList = database.StoredProcedures.Where(x => x.IsSystemObject == false).ToList();
-                //List<StoredProcedure> list = (List<StoredProcedure>)database.StoredProcedures.OfType<StoredProcedure>().Where(x => x.IsSystemObject == false).ToList<StoredProcedure>();
+                //List<StoredProcedure> filteredList = database.StoredProcedures.Where(x => x.IsSystemObject == false).ToList();
+                List<StoredProcedure> list = (List<StoredProcedure>)database.StoredProcedures.OfType<StoredProcedure>().Where(x => x.IsSystemObject == false).ToList<StoredProcedure>();
 
-                //scripter.Options.ScriptDrops = true;
-                //foreach (StoredProcedure sproc in list)
-                //{
-                //    IEnumerable<string> sprocScripts = scripter.EnumScript(new Urn[] { sproc.Urn });
-                //    string tmp = "";
-                //    foreach (string script in sprocScripts)
-                //        tmp += script + crnl;
-                //    scrs += tmp + GO;
-                //    progress(tmp);
-                //}
+                scripter.Options.ScriptDrops = true;
+                foreach (StoredProcedure sproc in list)
+                {
+                    IEnumerable<string> sprocScripts = scripter.EnumScript(new Urn[] { sproc.Urn });
+                    string tmp = "";
+                    foreach (string script in sprocScripts)
+                        tmp += script + crnl;
+                    scrs += tmp + GO;
+                    progress(tmp);
+                }
 
-                //scripter.Options.ScriptDrops = false;
-                //foreach (StoredProcedure sproc in list)
-                //{
-                //    IEnumerable<string> sprocScripts = scripter.EnumScript(new Urn[] { sproc.Urn });
-                //    string tmp = "";
-                //    foreach (string script in sprocScripts)
-                //        tmp += script + crnl;
-                //    scrs += tmp + GO;
-                //    progress(tmp);
-                //}
+                scripter.Options.ScriptDrops = false;
+                foreach (StoredProcedure sproc in list)
+                {
+                    IEnumerable<string> sprocScripts = scripter.EnumScript(new Urn[] { sproc.Urn });
+                    string tmp = "";
+                    foreach (string script in sprocScripts)
+                        tmp += script + crnl;
+                    scrs += tmp + GO;
+                    progress(tmp);
+                }
 
 
                 progress("*******************************************************************************");
                 progress(" Filtering system functions...");
                 progress("*******************************************************************************");
-                //List<StoredProcedure> filteredList = database.StoredProcedures.Where(x => x.IsSystemObject == false).ToList();
-                List<UserDefinedFunction> listFunctions = (List<UserDefinedFunction>)database.StoredProcedures.OfType<UserDefinedFunction>().Where(x => x.IsSystemObject == false).ToList<UserDefinedFunction>();
+                List<UserDefinedFunction> listFunctions = (List<UserDefinedFunction>)database.UserDefinedFunctions.OfType<UserDefinedFunction>().Where(x => x.IsSystemObject == false).ToList<UserDefinedFunction>();
 
                 scripter.Options.ScriptDrops = true;
                 foreach (UserDefinedFunction func in listFunctions)
